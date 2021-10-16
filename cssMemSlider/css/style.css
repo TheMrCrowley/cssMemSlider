@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+}
+
+body {
+    background-color: #25282a;
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+}
+
+input {
+    display: none;
+}
+
+/* Slider body */
+.slider__wrapper {
+    max-width: 45vw;
+    margin: 0 auto;
+}
+
+.slider .slider__slides {
+    display: flex;
+    position: relative;
+    width: 500%;
+}
+
+.slider__overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider .slider__slide {
+    width: 20%;
+    height: 0;
+    padding-top: 20%;
+}
+
+/* Add memes */
+.slider .slider__slide:nth-child(1) {
+    background: url(../assets/plak.avif) center no-repeat;
+    background-size: contain;
+}
+.slider .slider__slide:nth-child(2) {
+    background: url(../assets/cat.avif) center no-repeat;
+    background-size: contain;
+}
+.slider .slider__slide:nth-child(3) {
+    background: url(../assets/cross-check.avif) center no-repeat;
+    background-size: cover;
+}
+.slider .slider__slide:nth-child(4) {
+    background: url(../assets/wolf.avif) center no-repeat;
+    background-size: cover;
+}
+.slider .slider__slide:nth-child(5) {
+    background: url(../assets/end.avif) center no-repeat;
+    background-size: contain;
+}
+
+/* Slider controls */
+.slider__controls-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.slider__titels-wrapper {
+    width: 50%;
+    overflow: hidden;
+}
+
+.slider__titles {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 500%;
+}
+
+.slider__descr {
+    width: 20%;
+    float: left;
+    font-size: 1rem;
+}
+
+.slider__controls_active {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    text-align: center;
+    width: 25%;
+    transform: skew(-25deg);
+}
+
+.slider__controls_active .slider__label {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+/* Slider controls activities state */
+.slider__controls_active .slider__label::before {
+    content: '';
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background-color: #fff;
+    z-index: 50;
+    transition: 0.5s all ease-in-out;
+}
+
+.slider__controls_active .slider__label:hover::before{
+    background-color: #ab304a;
+    cursor: pointer;
+}
+
+.slider__controls_active .slider__label:active::before {
+    background-color: #c5a9af;
+    cursor: pointer;
+}
+
+/* Slider  functional*/
+#meme1:checked ~ .slider__controls-wrapper .slider__label:nth-child(1)::before {
+    width: 80%;
+    height: 80%;
+    background-color: #c70101;
+}
+#meme2:checked ~ .slider__controls-wrapper .slider__label:nth-child(2)::before {
+    width: 80%;
+    height: 80%;
+    background-color: #c70101;
+}
+#meme3:checked ~ .slider__controls-wrapper .slider__label:nth-child(3)::before {
+    width: 80%;
+    height: 80%;
+    background-color: #c70101;
+}
+#meme4:checked ~ .slider__controls-wrapper .slider__label:nth-child(4)::before {
+    width: 80%;
+    height: 80%;
+    background-color: #c70101;
+}
+#meme5:checked ~ .slider__controls-wrapper .slider__label:nth-child(5)::before {
+    width: 80%;
+    height: 80%;
+    background-color: #c70101;
+}
+
+#meme1:checked ~ .slider .slider__slides {
+    left: 0;
+}
+#meme2:checked ~ .slider .slider__slides {
+    left: -100%;
+}
+#meme3:checked ~ .slider .slider__slides {
+    left: -200%;
+}
+#meme4:checked ~ .slider .slider__slides {
+    left: -300%;
+}
+#meme5:checked ~ .slider .slider__slides {
+    left: -400%;
+}
+
+#meme1:checked ~ .slider__controls-wrapper .slider__titles {
+    left: 0;
+}
+#meme2:checked ~ .slider__controls-wrapper .slider__titles {
+    left: -100%;
+}
+#meme3:checked ~ .slider__controls-wrapper .slider__titles {
+    left: -200%;
+}
+#meme4:checked ~ .slider__controls-wrapper .slider__titles {
+    left: -300%;
+}
+#meme5:checked ~ .slider__controls-wrapper .slider__titles {
+    left: -400%;
+}
+
+
+/* Slider Animation */
+.slider .slider__slides {
+    transition: all 800ms ease-in-out;
+}
+
+.slider__controls-wrapper .slider__titles {
+    transition: all 800ms ease-in-out;
+}
