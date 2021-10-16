@@ -131,3 +131,72 @@ input {
     background-color: #c5a9af;
     cursor: pointer;
 }
+
+/* Slider  functional*/
+#meme1:checked ~ .slider__controls-wrapper .slider__label:nth-child(1)::before {
+    width: 80%;
+    height: 80%;
+    background-color: #c70101;
+}
+#meme2:checked ~ .slider__controls-wrapper .slider__label:nth-child(2)::before {
+    width: 80%;
+    height: 80%;
+    background-color: #c70101;
+}
+#meme3:checked ~ .slider__controls-wrapper .slider__label:nth-child(3)::before {
+    width: 80%;
+    height: 80%;
+    background-color: #c70101;
+}
+#meme4:checked ~ .slider__controls-wrapper .slider__label:nth-child(4)::before {
+    width: 80%;
+    height: 80%;
+    background-color: #c70101;
+}
+#meme5:checked ~ .slider__controls-wrapper .slider__label:nth-child(5)::before {
+    width: 80%;
+    height: 80%;
+    background-color: #c70101;
+}
+
+#meme1:checked ~ .slider .slider__slides {
+    left: 0;
+}
+#meme2:checked ~ .slider .slider__slides {
+    left: -100%;
+}
+#meme3:checked ~ .slider .slider__slides {
+    left: -200%;
+}
+#meme4:checked ~ .slider .slider__slides {
+    left: -300%;
+}
+#meme5:checked ~ .slider .slider__slides {
+    left: -400%;
+}
+
+#meme1:checked ~ .slider__controls-wrapper .slider__titles {
+    left: 0;
+}
+#meme2:checked ~ .slider__controls-wrapper .slider__titles {
+    left: -100%;
+}
+#meme3:checked ~ .slider__controls-wrapper .slider__titles {
+    left: -200%;
+}
+#meme4:checked ~ .slider__controls-wrapper .slider__titles {
+    left: -300%;
+}
+#meme5:checked ~ .slider__controls-wrapper .slider__titles {
+    left: -400%;
+}
+
+
+/* Slider Animation */
+.slider .slider__slides {
+    transition: all 800ms ease-in-out;
+}
+
+.slider__controls-wrapper .slider__titles {
+    transition: all 800ms ease-in-out;
+}
