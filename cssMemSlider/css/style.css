@@ -6,3 +6,60 @@
     padding: 0;
     -webkit-user-select: none;
 }
+
+body {
+    background-color: #25282a;
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+}
+
+input {
+    display: none;
+}
+
+/* Slider body */
+.slider__wrapper {
+    max-width: 45vw;
+    margin: 0 auto;
+}
+
+.slider .slider__slides {
+    display: flex;
+    position: relative;
+    width: 500%;
+}
+
+.slider__overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider .slider__slide {
+    width: 20%;
+    height: 0;
+    padding-top: 20%;
+}
+
+/* Add memes */
+.slider .slider__slide:nth-child(1) {
+    background: url(../assets/plak.avif) center no-repeat;
+    background-size: contain;
+}
+.slider .slider__slide:nth-child(2) {
+    background: url(../assets/cat.avif) center no-repeat;
+    background-size: contain;
+}
+.slider .slider__slide:nth-child(3) {
+    background: url(../assets/cross-check.avif) center no-repeat;
+    background-size: cover;
+}
+.slider .slider__slide:nth-child(4) {
+    background: url(../assets/wolf.avif) center no-repeat;
+    background-size: cover;
+}
+.slider .slider__slide:nth-child(5) {
+    background: url(../assets/end.avif) center no-repeat;
+    background-size: contain;
+}
